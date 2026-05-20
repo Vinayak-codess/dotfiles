@@ -1,12 +1,15 @@
 # i3 config - Minimalist
 set $mod Mod1
-font pango:monospace 10
+font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # Autostart
-exec polybar
+exec --no-startup-id polybar
+exec --no-startup-id xrandr --output eDP-1 --scale 0.5x0.5
+exec_always --no-startup-id feh --bg-fill /home/cat/Pictures/wallpapers/sword.jpeg 
+exec_always --no-startup-id xsetroot -cursor_name left_ptr
 
 # --- Core Apps ---
 bindsym $mod+t exec kitty
@@ -85,19 +88,9 @@ default_floating_border pixel 1
 smart_borders on
 
 bar {
-    status_command i3status
-    position bottom
-    font pango:monospace 10
-    colors {
-        background #1a1a1a
-        statusline #ffffff
-        separator  #666666
-        # active workspace
-        focused_workspace  #1a1a1a #1a1a1a #ffffff
-        # inactive workspace
-        inactive_workspace #1a1a1a #1a1a1a #888888
+	mode hide
+	hidden_state hide
     }
-}
 
 
 # This reserves space at the top so windows don't cover the bar
