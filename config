@@ -1,4 +1,4 @@
-# i3 config - Minimalist
+# i3 config
 set $mod Mod1
 font pango:monospace 8
 
@@ -8,17 +8,16 @@ floating_modifier $mod
 # Autostart
 exec --no-startup-id polybar
 exec --no-startup-id xrandr --output eDP-1 --scale 0.5x0.5
-exec_always --no-startup-id feh --bg-fill /home/cat/Pictures/wallpapers/sword.jpeg 
+exec_always --no-startup-id feh --bg-fill /home/cat/Downloads/jon.png
 exec_always --no-startup-id xsetroot -cursor_name left_ptr
 
 # --- Core Apps ---
-bindsym $mod+t exec kitty
+bindsym $mod+t exec alacritty
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+e exec thunar
-bindsym $mod+b exec brave --password-store=basic
-bindsym $mod+g exec brave --app=https://gemini.google.com
+bindsym $mod+b exec thorium-browser --password-store=basic
 bindsym $mod+s exec sh -c "maim -s | xclip -selection clipboard -t image/png"
-
+bindsym $mod+g exec thorium-browser --app="https://gemini.google.com"
 # --- Window Management ---
 bindsym $mod+q kill
 bindsym $mod+j focus down
@@ -27,7 +26,7 @@ bindsym $mod+h focus left
 bindsym $mod+l focus right
 
 # Moving windows
-bindsym $mod+Shift+j move down
+bindsym $mod+Shift+j exec i3lock -i /home/cat/Downloads/suguru.png
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+l move right
