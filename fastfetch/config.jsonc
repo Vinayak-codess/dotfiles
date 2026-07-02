@@ -53,11 +53,11 @@
             "format": "{>22}  │"
         },
         {
-	        "key": "│  OS Age                      ",
             "type": "disk",
-	        "folders": "/",
-	        "format": "{days} days  │"
-	    },
+            "key": "│  OS Age       ",
+            "folders": "/",
+            "format": "{days>17} days  │"
+        },
         {
             "type": "command",
             "key": "│  Ram          ",
