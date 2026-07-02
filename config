@@ -5,14 +5,18 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#Restart Polybar
+bindsym $mod+Shift+b exec killall polybar
+bindsym $mod+Shift+n exec polybar
+
 # Autostart
 exec --no-startup-id polybar
 exec --no-startup-id xrandr --output eDP-1 --scale 0.5x0.5
-exec_always --no-startup-id feh --bg-fill /home/cat/Downloads/jon.png
+exec_always --no-startup-id feh --bg-fill /home/cat/Downloads/surfer.jpeg
 exec_always --no-startup-id xsetroot -cursor_name left_ptr
 
 # --- Core Apps ---
-bindsym $mod+t exec alacritty
+bindsym $mod+t exec kitty
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+e exec thunar
 bindsym $mod+b exec thorium-browser --password-store=basic
@@ -36,7 +40,7 @@ bindsym $mod+Control+h resize shrink width 5 px or 5 ppt
 bindsym $mod+Control+l resize grow width 5 px or 5 ppt
 
 # --- Layouts ---
-bindsym $mod+Shift+t layout tiling
+bindsym $mod+Shift+t layout default
 bindsym $mod+f layout floating
 bindsym $mod+m layout tabbed
 bindsym $mod+space layout toggle all
